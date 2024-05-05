@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import 'aos/dist/aos.css';
 import Aos from "aos";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Swal from 'sweetalert2'
 
 
 Aos.init();
@@ -43,7 +44,14 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 e.target.reset();
-                alert('User Login Successfully');
+                // alert('User Login Successfully');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
 
                 // Navigate
                 navigate(location?.state ? location.state : '/');
@@ -59,7 +67,14 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 console.log(result.user);
-                alert('User Login Successfully');
+                // alert('User Login Successfully');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
 
                 // Navigate
                 navigate(location?.state ? location.state : '/');
@@ -67,6 +82,7 @@ const Login = () => {
             .catch(error => {
                 console.error(error);
                 alert(error.message);
+                
             })
 
     }
@@ -75,7 +91,14 @@ const Login = () => {
         signInWithGithub()
             .then(result => {
                 console.log(result.user);
-                alert('User Login Successfully');
+                // alert('User Login Successfully');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
 
                 // Navigate
                 navigate(location?.state ? location.state : '/');

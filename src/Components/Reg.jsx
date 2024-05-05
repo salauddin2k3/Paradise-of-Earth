@@ -4,6 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
 // import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Swal from "sweetalert2";
 
 
 const Reg = () => {
@@ -57,7 +58,14 @@ const Reg = () => {
 
                 console.log(result.user)
                 setRegSuccess('User Created Successfully');
-                alert('User Created Successfully');
+                // alert('User Created Successfully');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User Created Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
 
                 UserUpdateProfile(name, url);
 
