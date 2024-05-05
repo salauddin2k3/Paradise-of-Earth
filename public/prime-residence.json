@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Modern Family Home",
+        "segment_name": "Residential",
+        "description": "Beautiful modern family home with spacious living areas and stunning views.",
+        "price": "$500,000",
+        "status": "Sale",
+        "area": "2,500 sq ft",
+        "location": "New York City",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Garden"
+        ],
+        "image": "https://i.ibb.co/dKffZWV/01.png"
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Townhouse",
+        "segment_name": "Residential",
+        "description": "Charming townhouse with a cozy atmosphere and convenient location.",
+        "price": "$350,000",
+        "status": "Sale",
+        "area": "1,800 sq ft",
+        "location": "Los Angeles",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Patio"
+        ],
+        "image": "https://i.ibb.co/ykQFkzd/03.png"
+    },
+    {
+        "id": 3,
+        "estate_title": "Luxury Apartment",
+        "segment_name": "Residential",
+        "description": "Luxurious apartment in a prestigious building with top-notch amenities.",
+        "price": "$800,000",
+        "status": "Rent",
+        "area": "1,200 sq ft",
+        "location": "Miami",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Backyard"
+        ],
+        "image": "https://i.ibb.co/zbk8TZJ/06.png"
+    },
+    {
+        "id": 4,
+        "estate_title": "Family-Friendly Home",
+        "segment_name": "Residential",
+        "description": "Spacious family-friendly home with a large backyard and plenty of room for kids to play.",
+        "price": "$450,000",
+        "status": "Rent",
+        "area": "2,000 sq ft",
+        "location": "Chicago",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Playroom"
+        ],
+        "image": "https://i.ibb.co/80pZD6p/04.png"
+    },
+    {
+        "id": 5,
+        "estate_title": "Seaside Villa",
+        "segment_name": "Residential",
+        "description": "Exquisite seaside villa with breathtaking ocean views and private beach access.",
+        "price": "$1,200,000",
+        "status": "Sale",
+        "area": "3,500 sq ft",
+        "location": "Malibu",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Private Beach"
+        ],
+        "image": "https://i.ibb.co/HXhhWHW/05.png"
+    },
+    {
+        "id": 6,
+        "estate_title": "Downtown Loft",
+        "segment_name": "Residential",
+        "description": "Modern loft apartment in the heart of the city with urban chic design.",
+        "price": "$600,000",
+        "status": "Rent",
+        "area": "1,500 sq ft",
+        "location": "San Francisco",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "City View"
+        ],
+        "image": "https://i.ibb.co/LYXZYX5/07.png"
+    },
+    {
+        "id": 7,
+        "estate_title": "Mountain Retreat",
+        "segment_name": "Residential",
+        "description": "Serenely nestled mountain retreat offering peace and tranquility amidst nature.",
+        "price": "$700,000",
+        "status": "Sale",
+        "area": "2,800 sq ft",
+        "location": "Aspen",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Hot Tub"
+        ],
+        "image": "https://i.ibb.co/zbk8TZJ/06.png"
+    },
+    {
+        "id": 8,
+        "estate_title": "Urban Condo",
+        "segment_name": "Residential",
+        "description": "Stylish urban condo in a vibrant neighborhood with access to trendy shops and restaurants.",
+        "price": "$450,000",
+        "status": "Rent",
+        "area": "1,000 sq ft",
+        "location": "Brooklyn",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Balcony"
+        ],
+        "image": "https://i.ibb.co/LYXZYX5/07.png"
+    },
+    {
+        "id": 9,
+        "estate_title": "Riverside Cottage",
+        "segment_name": "Residential",
+        "description": "Quaint riverside cottage with picturesque views and a peaceful ambiance.",
+        "price": "$300,000",
+        "status": "Rent",
+        "area": "1,200 sq ft",
+        "location": "Portland",
+        "facilities": [
+            "Living Room",
+            "Kitchen",
+            "Fireplace"
+        ],
+        "image": "https://i.ibb.co/LYXZYX5/07.png"
+    }
+]
