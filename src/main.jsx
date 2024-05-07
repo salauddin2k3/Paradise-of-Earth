@@ -18,6 +18,7 @@ import PrivateRoute from './Components/PrivateRoute';
 import AllTouristsSpot from './Components/AllTouristsSpot';
 import MyList from './Components/MyList';
 import AddTouristsSpot from './Components/AddTouristsSpot';
+import UpdateSpot from './Components/UpdateSpot';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
       },
       {
+        path: "/update-spot/:id",
+        element: <UpdateSpot></UpdateSpot>
+      },
+      {
         path: "/login",
         element: <Login></Login>
       },
@@ -56,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/add-tourists-spot',
-        element: <AddTouristsSpot></AddTouristsSpot>
+        element: <PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>
       }
     ]
   },

@@ -20,9 +20,9 @@ const AddTouristsSpot = () => {
         const travelTime = form.get('travel-time');
         const imageUrl = form.get('image-url');
         const description = form.get('description');
-        const userEmail = user?.email;
-        const userName = user?.displayName;
-        const newInfo = {spotName, location, seasonality, visitor, country, cost, travelTime, imageUrl, description, userEmail, userName};
+        const email = user?.email;
+        const name = user?.displayName;
+        const newInfo = {spotName, location, seasonality, visitor, country, cost, travelTime, imageUrl, description, email, name};
 
         fetch("http://localhost:5000/addInfo", {
             method: "POST",
