@@ -87,12 +87,21 @@ const AddTouristsSpot = () => {
                             </div>
                         </div>
                         <div className="w-full">
+                            {/* Test */}
                             <div>
                                 <h2 className="text-lg font-semibold">Country</h2>
-                                <label className="mt-2 input input-bordered flex items-center gap-2">
-                                    <input type="text" name="country" className="grow" placeholder="Country" />
+                                <label className=" mt-2 input input-bordered flex items-center gap-2">
+                                    <select className="w-full text-gray-800 " name="country" id="">
+                                        <option>Bangladesh</option>
+                                        <option>Thailand</option>
+                                        <option>Indonesia</option>
+                                        <option>Malaysia</option>
+                                        <option>Vietnam</option>
+                                        <option>Cambodia</option>
+                                    </select>
                                 </label>
                             </div>
+                            {/* Test */}
                             <div className="mt-4">
                                 <h2 className="text-lg font-semibold">Average Cost</h2>
                                 <label className="mt-2 input input-bordered flex items-center gap-2">
