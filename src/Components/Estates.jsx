@@ -1,27 +1,36 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Estate from "./Estate";
+import { AuthContext } from "../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const Estates = () => {
 
-    const [estates, setEstates] = useState([]);
+    const { user } = useContext(AuthContext);
+
+    // const [control, setControl] = useState(false);
+
+    const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        fetch('/prime-residence.json')
+        fetch('http://localhost:5000/allInfo')
             .then(res => res.json())
-            .then(data => setEstates(data))
-    }, [])
-
+            .then((data) => {
+                console.log(data);
+                setInfo(data);
+            });
+    }, [user]);
 
 
     return (
         <div>
-            <h2 className="text-5xl font-bold text-center mt-20">Estates:</h2>
+            <Helmet><title>Spot List</title></Helmet>
+            <h2 className="text-5xl font-bold text-center mt-20">My Added Spots:</h2>
             <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    estates.map(estate => <Estate
-                    estate={estate}
-                    key={estate.id}
+                    info?.map(info => <Estate
+                        info={info}
+                        key={info._id}
                     ></Estate>)
                 }
             </div>

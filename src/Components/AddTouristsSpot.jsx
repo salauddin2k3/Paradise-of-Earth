@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { BsPatchPlusFill } from "react-icons/bs";
 import { AuthContext } from "../Providers/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const AddTouristsSpot = () => {
 
-    const { user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
+
+    const navigateLocation = useLocation();
+    const navigate = useNavigate();
 
 
     const handleAddSpot = (e) => {
@@ -22,19 +27,27 @@ const AddTouristsSpot = () => {
         const description = form.get('description');
         const email = user?.email;
         const name = user?.displayName;
-        const newInfo = {spotName, location, seasonality, visitor, country, cost, travelTime, imageUrl, description, email, name};
+        const newInfo = { spotName, location, seasonality, visitor, country, cost, travelTime, imageUrl, description, email, name };
 
         fetch("http://localhost:5000/addInfo", {
             method: "POST",
-            headers: {"Content-type": "application/json"},
+            headers: { "Content-type": "application/json" },
             body: JSON.stringify(newInfo)
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data?.insertedId){
-                alert("data added")
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data?.insertedId) {
+                    // alert("data added");
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Data Added Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    navigate(navigateLocation?.state ? navigateLocation.state : '/my-list');
+                }
+            })
         console.log(newInfo);
     }
 

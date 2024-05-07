@@ -8,7 +8,7 @@ const MyList = () => {
 
     const { user } = useContext(AuthContext);
 
-    const [control, setControl] = useState(false);
+    // const [control, setControl] = useState(false);
 
     const [info, setInfo] = useState([]);
 
@@ -23,24 +23,20 @@ const MyList = () => {
                 console.log(data);
                 setInfo(data);
             });
-    }, [user, control]);
+    }, [user]);
 
 
     return (
         <div>
             <Helmet><title>My List</title></Helmet>
-            <h2>Test</h2>
-            <div className="border border-red-900">
-                <div>
-                    {
-                        info?.map(info => <MyListInfo
-                            info={info}
-                            key={info._id}
-                            control={control}
-                            setControl={setControl}
-                        ></MyListInfo>)
-                    }
-                </div>
+            <h2 className="text-5xl font-bold text-center mt-20">My Added Spots:</h2>
+            <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {
+                    info?.map(info => <MyListInfo
+                        info={info}
+                        key={info._id}
+                    ></MyListInfo>)
+                }
             </div>
         </div>
     );

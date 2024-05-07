@@ -19,6 +19,7 @@ import AllTouristsSpot from './Components/AllTouristsSpot';
 import MyList from './Components/MyList';
 import AddTouristsSpot from './Components/AddTouristsSpot';
 import UpdateSpot from './Components/UpdateSpot';
+import DetailsInfo from './Components/DetailsInfo';
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,10 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch('/prime-residence.json')
+      },
+      {
+        path: 'detailsInfo/:id',
+        element: <DetailsInfo></DetailsInfo>
       },
       {
         path: '/all-tourists-spot',

@@ -1,39 +1,54 @@
+
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLoaderData, useParams } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { useParams } from "react-router-dom";
 
 
 const Details = () => {
 
-    const residenceDetails = useLoaderData();
     const { id } = useParams();
-    const detailInt = parseInt(id);
-    const detail = residenceDetails.find(detail => detail.id === detailInt);
 
-    console.log(detail);
+    const [userData, setUserData] = useState([]);
+
+    console.log(userData);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/singleInfo/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setUserData(data);
+            })
+    }, [id])
 
     return (
         <div>
             <Helmet><title>Residence Details</title></Helmet>
             <div className="mt-16 mx-2 flex flex-col items-center gap-11">
-                <div className="p-4 lg:p-16 bg-[#1313130d] rounded-xl flex justify-center">
-                    <img className="w-fit rounded-xl" src={detail.image} alt="" />
+                <div className="w-full p-4 lg:p-16 bg-[#1313130d] rounded-xl flex justify-center">
+                    <img className="w-fit rounded-xl" src={userData.imageUrl} alt="" />
                 </div>
-                <div className="p-3 flex flex-col lg:flex-row gap-4">
-                    <div className="lg:w-2/3 border-2 border-gray-400 rounded-lg p-9">
-                        <h1 className="text-3xl lg:text-4xl font-bold text-[#131313] font-playfire">{detail.estate_title} <span className="text-base italic">({detail.segment_name})</span></h1>
-                        <p className="mt-4 text-xl font-medium text-[#131313cc] font-work">Description : {detail.description} </p>
-                        <div className="mt-5 flex flex-col lg:flex-row lg:items-center gap-4">
-                            <p className="text-base font-bold text-[#131313] font-work">Facilities :</p>
-                            {
-                                detail.facilities.map((facilities, idx) => <p className='text-base font-medium text-[#23BE0A] font-work bg-[#23be0a0d] px-4 py-1 rounded-full w-fit' key={idx}>{facilities}</p>)
-                            }
+                <div className="p-3 flex flex-col lg:flex-col gap-4">
+                    <div className="w-fll border-2 border-gray-400 rounded-lg p-9">
+                        <h1 className="text-3xl text-center lg:text-4xl font-bold text-[#131313] font-playfire">{userData.spotName}</h1>
+                        <div className="flex items-center mt-4 justify-center gap-20">
+                            <h2 className="text-2xl font-bold text-[#131313cc] font-work">Country: {userData.country}</h2>
+                            <div className="flex items-center gap-3">
+                                    <div>
+                                        <FaLocationDot className="text-xl text-[#131313cc]" />
+                                    </div>
+                                    <div>
+                                        <h3 className='text-2xl font-bold text-[#131313cc] font-work'>{userData.location}</h3>
+                                    </div>
+                                </div>
                         </div>
+                        <p className="mt-4 text-center text-xl font-medium text-[#131313cc] font-work">{userData.description} </p>
                     </div>
-                    <div className="lg:w-1/3 border-2 border-gray-400 rounded-lg p-9">
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Location : {detail.location} </p>
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Price : {detail.price} </p>
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Area : {detail.area} </p>
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work underline text-end">({detail.status}) </p>
+                    <div className="w-full border-2 flex flex-col items-center border-gray-400 rounded-lg p-9">
+                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Average Cost : {userData.cost} </p>
+                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Best Season for Tour:  ({userData.seasonality}) </p>
+                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Travel Time: {userData.travelTime} </p>
+                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Total Visitor Per Year:  ({userData.visitor}) </p>
                     </div>
                 </div>
             </div>
