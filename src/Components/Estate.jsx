@@ -10,6 +10,7 @@ Aos.init();
 
 const Estate = (info) => {
 
+
     return (
         <div data-aos="fade-up" data-aos-duration="3000" >
             <div className='mx-2'>

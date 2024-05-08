@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import Contact from "./Contact";
 import Faq from "./Faq";
 import CountrySection from "./CountrySection";
+import LottieReact from "./LottieReact";
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Helmet><title>Paradise of Earth</title></Helmet>
             <Slider></Slider>
+            <LottieReact></LottieReact>
             <Estates></Estates>
             <CountrySection></CountrySection>
             <Faq></Faq>

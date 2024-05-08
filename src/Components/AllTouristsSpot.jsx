@@ -27,6 +27,15 @@ const AllTouristsSpot = () => {
         <div>
             <Helmet><title>Spot List</title></Helmet>
             <h2 className="text-5xl font-bold text-center mt-20">All Spots:</h2>
+            <div className="mt-6 flex justify-end">
+                <table>
+                    <select className="select select-ghost w-full max-w-xs border-gray-300 border">
+                        <option disabled selected>Find Your Preferred Data</option>
+                        <option>Low Budget</option>
+                        <option>High Budget</option>
+                    </select>
+                </table>
+            </div>
             <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     info?.map(info => <Estate
