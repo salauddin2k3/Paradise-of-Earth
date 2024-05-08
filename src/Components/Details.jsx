@@ -11,7 +11,7 @@ const Details = () => {
 
     const [userData, setUserData] = useState([]);
 
-    console.log(userData);
+    // console.log(userData);
 
     useEffect(() => {
         fetch(`http://localhost:5000/singleInfo/${id}`)
@@ -23,7 +23,7 @@ const Details = () => {
 
     return (
         <div>
-            <Helmet><title>Residence Details</title></Helmet>
+            <Helmet><title>Spot Details</title></Helmet>
             <div className="mt-16 mx-2 flex flex-col items-center gap-11">
                 <div className="w-full p-4 lg:p-16 bg-[#1313130d] rounded-xl flex justify-center">
                     <img className="w-fit rounded-xl" src={userData.imageUrl} alt="" />

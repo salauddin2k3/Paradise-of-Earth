@@ -12,15 +12,15 @@ const MyList = () => {
 
     const [info, setInfo] = useState([]);
 
-    console.log(info)
+    // console.log(info)
 
-    console.log(user);
+    // console.log(user);
 
     useEffect(() => {
         fetch(`http://localhost:5000/myInfo/${user?.email}`)
             .then(res => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setInfo(data);
             });
     }, [user]);

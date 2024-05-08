@@ -48,7 +48,7 @@ const AddTouristsSpot = () => {
                     navigate(navigateLocation?.state ? navigateLocation.state : '/my-list');
                 }
             })
-        console.log(newInfo);
+        // console.log(newInfo);
     }
 
     return (

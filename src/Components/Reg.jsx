@@ -32,7 +32,7 @@ const Reg = () => {
         const email = form.get('email');
         const url = form.get('url');
         const password = form.get('password');
-        console.log(name, email, url, password);
+        // console.log(name, email, url, password);
 
         // Reset Error & Success
         setRegError('');

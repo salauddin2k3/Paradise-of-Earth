@@ -8,7 +8,7 @@ const Updates = () => {
 
     const { user, UserUpdateProfile, setUser } = useContext(AuthContext);
 
-    console.log(user)
+    // console.log(user)
 
     // const location = useLocation();
     // const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Updates = () => {
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const url = form.get('url');
-        console.log(name, url);
+        // console.log(name, url);
 
 
 

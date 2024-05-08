@@ -16,7 +16,7 @@ const Estates = () => {
         fetch('http://localhost:5000/allInfo')
             .then(res => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setInfo(data);
             });
     }, [user]);
