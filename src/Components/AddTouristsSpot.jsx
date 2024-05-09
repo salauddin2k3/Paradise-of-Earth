@@ -105,7 +105,7 @@ const AddTouristsSpot = () => {
                             <div className="mt-4">
                                 <h2 className="text-lg font-semibold">Average Cost</h2>
                                 <label className="mt-2 input input-bordered flex items-center gap-2">
-                                    <input type="text" name="cost" className="grow" placeholder="Cost" />
+                                    <input type="number" name="cost" className="grow" placeholder="Cost" />
                                 </label>
                             </div>
                             <div className="mt-4">

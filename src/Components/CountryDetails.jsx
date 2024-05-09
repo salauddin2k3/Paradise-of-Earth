@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
 
 
 const CountryDetails = () => {
 
-    const { country } = useParams();
+    // const { country } = useParams();
 
-    const [userData, setUserData] = useState([]);
+    // const [userData, setUserData] = useState([]);
 
-    console.log(userData);
+    // console.log(userData);
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/allInfo/${country}`)
-            .then(res => res.json())
-            .then(data => {
-                setUserData(data);
-            })
-    }, [country])
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/allInfo/${country}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setUserData(data);
+    //         })
+    // }, [country])
 
     return (
         <div>

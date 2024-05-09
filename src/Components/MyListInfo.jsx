@@ -85,7 +85,7 @@ const MyListInfo = (info) => {
                             <div className=' mt-6 border-b-2 border-dashed'></div>
                             <div className="mt-5 flex items-center justify-between">
                                 <div>
-                                    <h3 className='text-base font-medium text-[#131313cc] font-work'> <span className="font-bold">Average Cost:</span> {info.info.cost}</h3>
+                                    <h3 className='text-base font-medium text-[#131313cc] font-work'> <span className="font-bold">Average Cost:</span> ${info.info.cost}</h3>
                                 </div>
                                 <div>
                                     <h3 className='text-base font-medium text-[#131313cc] font-work'><span className="font-bold">Visitors: </span> {info.info.visitor}</h3>

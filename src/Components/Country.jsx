@@ -1,25 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
-import { AuthContext } from "../Providers/AuthProvider";
+import {  } from "../Providers/AuthProvider";
 
 
 
 const Country = (info) => {
 
-    const { user } = useContext(AuthContext);
-    const [anotherInfo, setAnotherInfo] = useState([]);
-
-    // console.log(anotherInfo);
-    console.log(anotherInfo);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/allInfo')
-            .then(res => res.json())
-            .then((data) => {
-                // console.log(data);
-                setAnotherInfo(data);
-            });
-    }, [user]);
 
     return (
         <div>

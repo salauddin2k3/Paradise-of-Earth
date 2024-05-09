@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../Providers/AuthProvider";
 import Estate from "./Estate";
 
@@ -10,6 +9,8 @@ const AllTouristsSpot = () => {
     // const [control, setControl] = useState(false);
 
     const [info, setInfo] = useState([]);
+
+    console.log(info)
 
     // console.log(info);
 
@@ -22,17 +23,28 @@ const AllTouristsSpot = () => {
             });
     }, [user]);
 
+    const handleSorted = (e) => {
+        console.log(e.target.value);
+        const value = e.target.value;
+        if (value === 'low') {
+            const sorted = info.sort((a, b) => parseFloat(a.cost) - parseFloat(b.cost))
+            setInfo(sorted);
+        }
+        if (value === 'high') {
+            const sorted = info.sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost))
+            setInfo(sorted);
+        }
+    }
 
     return (
         <div>
-            <Helmet><title>Spot List</title></Helmet>
             <h2 className="text-5xl font-bold text-center mt-20">All Spots:</h2>
             <div className="mt-6 flex justify-end">
                 <table>
-                    <select className="select select-ghost w-full max-w-xs border-gray-300 border">
+                    <select onChange={handleSorted} className="select select-ghost w-full max-w-xs border-gray-300 border">
                         <option disabled selected>Find Your Preferred Data</option>
-                        <option>Low Budget</option>
-                        <option>High Budget</option>
+                        <option value={'low'}>Low Budget</option>
+                        <option value={'high'}>High Budget</option>
                     </select>
                 </table>
             </div>
