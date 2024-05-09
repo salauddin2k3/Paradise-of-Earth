@@ -6,10 +6,12 @@ import {  } from "../Providers/AuthProvider";
 
 const Country = (info) => {
 
+    console.log(info.info.country);
+
 
     return (
         <div>
-            <Link to={`/country-details/${info.info.country}`}>
+            <Link to={`/country-details/${info.info._id}`}>
                 <div data-aos="fade-up" data-aos-duration="3000" >
                     <div className='mx-2'>
                         <div className='rounded-xl mt-7 border-[#dddcdc] border p-6 h-full'>
