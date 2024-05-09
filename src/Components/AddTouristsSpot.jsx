@@ -91,7 +91,8 @@ const AddTouristsSpot = () => {
                             <div>
                                 <h2 className="text-lg font-semibold">Country</h2>
                                 <label className=" mt-2 input input-bordered flex items-center gap-2">
-                                    <select className="w-full text-gray-800 " name="country" id="">
+                                    <select className="w-full " name="country" id="">
+                                        <option disabled selected>Select Country</option>
                                         <option>Bangladesh</option>
                                         <option>Thailand</option>
                                         <option>Indonesia</option>

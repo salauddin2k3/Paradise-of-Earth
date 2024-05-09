@@ -32,23 +32,23 @@ const Details = () => {
                     <div className="w-fll border-2 border-gray-400 rounded-lg p-9">
                         <h1 className="text-3xl text-center lg:text-4xl font-bold text-[#131313] font-playfire">{userData.spotName}</h1>
                         <div className="flex items-center mt-4 justify-center gap-20">
-                            <h2 className="text-2xl font-bold text-[#131313cc] font-work">Country: {userData.country}</h2>
+                            <h2 className="text-2xl font-bold  font-work">Country: {userData.country}</h2>
                             <div className="flex items-center gap-3">
                                     <div>
-                                        <FaLocationDot className="text-xl text-[#131313cc]" />
+                                        <FaLocationDot className="text-xl " />
                                     </div>
                                     <div>
-                                        <h3 className='text-2xl font-bold text-[#131313cc] font-work'>{userData.location}</h3>
+                                        <h3 className='text-2xl font-bold  font-work'>{userData.location}</h3>
                                     </div>
                                 </div>
                         </div>
-                        <p className="mt-4 text-center text-xl font-medium text-[#131313cc] font-work">{userData.description} </p>
+                        <p className="mt-4 text-center text-xl font-medium  font-work">{userData.description} </p>
                     </div>
                     <div className="w-full border-2 flex flex-col items-center border-gray-400 rounded-lg p-9">
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Average Cost : {userData.cost} </p>
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Best Season for Tour:  ({userData.seasonality}) </p>
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Travel Time: {userData.travelTime} </p>
-                        <p className="mt-4 text-lg font-bold text-[#131313cc] font-work">Total Visitor Per Year:  ({userData.visitor}) </p>
+                        <p className="mt-4 text-lg font-bold  font-work">Average Cost : {userData.cost} </p>
+                        <p className="mt-4 text-lg font-bold  font-work">Best Season for Tour:  ({userData.seasonality}) </p>
+                        <p className="mt-4 text-lg font-bold  font-work">Travel Time: {userData.travelTime} </p>
+                        <p className="mt-4 text-lg font-bold  font-work">Total Visitor Per Year:  ({userData.visitor}) </p>
                     </div>
                 </div>
             </div>

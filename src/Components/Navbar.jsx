@@ -29,11 +29,11 @@ const Navbar = () => {
 
     const navLinks = <>
 
-        <li><NavLink to={'/'}><span className="text-base font-medium text-[#1E1E1E]">Home</span></NavLink></li>
-        <li><NavLink to={'/all-tourists-spot'}><span className="text-base font-medium text-[#1E1E1E]">All Tourists Spot</span></NavLink></li>
-        <li><NavLink to={'/add-tourists-spot'}><span className="text-base font-medium text-[#1E1E1E]">Add Tourists Spot</span></NavLink></li>
-        <li><NavLink to={'/update'}><span className="text-base font-medium text-[#1E1E1E]">Update Profile</span></NavLink></li>
-        <li><NavLink to={'/my-list'}><span className="text-base font-medium text-[#1E1E1E]">My List</span></NavLink></li>
+        <li><NavLink to={'/'}><span className="text-base font-medium">Home</span></NavLink></li>
+        <li><NavLink to={'/all-tourists-spot'}><span className="text-base font-medium ">All Tourists Spot</span></NavLink></li>
+        <li><NavLink to={'/add-tourists-spot'}><span className="text-base font-medium ">Add Tourists Spot</span></NavLink></li>
+        <li><NavLink to={'/update'}><span className="text-base font-medium ">Update Profile</span></NavLink></li>
+        <li><NavLink to={'/my-list'}><span className="text-base font-medium ">My List</span></NavLink></li>
 
     </>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
                                 {navLinks}
                             </ul>
                         </div>
-                        <NavLink to={'/'}><a className="text-lg md:text-2xl lg:text-4xl font-extrabold text-[#1E1E1E]">Paradise of Earth</a></NavLink>
+                        <NavLink to={'/'}><a className="text-lg md:text-2xl lg:text-4xl font-extrabold ">Paradise of Earth</a></NavLink>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -81,11 +81,11 @@ const Navbar = () => {
                         {
                             user
                                 ?
-                                <div onClick={logOut}><span className="btn text-sm lg:text-base font-medium text-[#1E1E1E]">Sign out</span></div>
+                                <div onClick={logOut}><span className="btn text-sm lg:text-base font-medium ">Sign out</span></div>
                                 :
                                 <div>
-                                    <NavLink to={'/login'}><span className="mr-4 btn text-base font-medium text-[#1E1E1E]">Login</span></NavLink>
-                                    <NavLink to={'/reg'}><span className="btn text-base font-medium text-[#1E1E1E]">Registration</span></NavLink>
+                                    <NavLink to={'/login'}><span className="mr-4 btn text-base font-medium ">Login</span></NavLink>
+                                    <NavLink to={'/reg'}><span className="btn text-base font-medium ">Registration</span></NavLink>
                                 </div>
 
                         }

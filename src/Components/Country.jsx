@@ -29,9 +29,9 @@ const Country = (info) => {
                                     } */}
                                     </div>
                                     <div className='mt-5'>
-                                        <h2 className='text-center text-2xl font-bold text-[#131313]'>{info.info.country}</h2>
+                                        <h2 className='text-center text-2xl font-bold '>{info.info.country}</h2>
                                         <h3 className="mt-2 text-sm font-semibold"></h3>
-                                        <p className='text-center mt-6 text-base font-medium text-[#131313cc] font-work'>{info.info.description}</p>
+                                        <p className='text-center mt-6 text-base font-medium  font-work'>{info.info.description}</p>
                                     </div>
                                 </div>
                             </div>
