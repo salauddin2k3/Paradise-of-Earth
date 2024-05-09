@@ -28,11 +28,11 @@ const AllTouristsSpot = () => {
         const value = e.target.value;
         if (value === 'low') {
             const sorted = info.sort((a, b) => parseFloat(a.cost) - parseFloat(b.cost))
-            setInfo(sorted);
+            setInfo(sorted.slice(0, info.length));
         }
         if (value === 'high') {
             const sorted = info.sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost))
-            setInfo(sorted);
+            setInfo(sorted.slice(0, info.length));
         }
     }
 
