@@ -1,15 +1,22 @@
-# Name
+# ExploreSoutheastAsia
 
-[Live Site](LINK)
+Live Site: [ExploreSoutheastAsia.com](https://example.com)
 
-## Features and Characteristics
-- **01
-- **02
-- **03
-- **04
-- **05
+## About
+Explore SoutheastAsia is a website dedicated to showcasing the beauty and wonders of Southeast Asia. From vibrant cities to serene beaches, explore the diverse cultures and landscapes of this enchanting region.
 
-## npm Package Names
-- **AOS Package**: [aos](https://www.npmjs.com/package/aos)
-- **Animate.css**: [animate.css](https://www.npmjs.com/package/animate.css)
-- **Swiper slider**: [swiper](https://www.npmjs.com/package/swiper)
+## Features
+- **Discover Iconic Destinations**: Explore famous tourist spots like Angkor Wat, Ha Long Bay, and Borobudur Temple.
+- **Plan Your Trip**: Get practical travel information such as average costs, best seasons to visit, and recommended travel durations.
+- **Interactive Maps**: Navigate through Southeast Asia with interactive maps highlighting key attractions and points of interest.
+- **Engaging Content**: Dive deep into the history, culture, and cuisine of Southeast Asian countries through articles, photos, and videos.
+- **Customizable Experience**: Personalize your journey by creating custom itineraries and saving your favorite destinations.
+
+## Technology Stack
+- ReactJS
+- Lottie React for animations
+- React-simple-typewriter for dynamic text effects
+- HTML5 & CSS3 for styling
+- Firebase for hosting and backend services
+
+## Thank You
