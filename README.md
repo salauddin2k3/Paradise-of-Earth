@@ -1,4 +1,4 @@
-# ExploreSoutheastAsia
+# Explore SoutheastAsia
 
 Live Site: [ExploreSoutheastAsia.com](https://example.com)
 
@@ -19,4 +19,4 @@ Explore SoutheastAsia is a website dedicated to showcasing the beauty and wonder
 - HTML5 & CSS3 for styling
 - Firebase for hosting and backend services
 
-## Thank You
+## Thanks
