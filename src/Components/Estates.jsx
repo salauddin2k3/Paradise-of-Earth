@@ -12,7 +12,7 @@ const Estates = () => {
     const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allInfo')
+        fetch('https://paradise-of-earth.vercel.app/allInfo')
             .then(res => res.json())
             .then((data) => {
                 // console.log(data);

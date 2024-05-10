@@ -17,7 +17,7 @@ const MyList = () => {
     // console.log(user);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myInfo/${user?.email}`)
+        fetch(`https://paradise-of-earth.vercel.app/myInfo/${user?.email}`)
             .then(res => res.json())
             .then((data) => {
                 // console.log(data);

@@ -14,7 +14,7 @@ const Test = () => {
     console.log(info);
 
     useEffect(() => {
-        fetch('http://localhost:5000/anotherAllInfo')
+        fetch('https://paradise-of-earth.vercel.app/anotherAllInfo')
             .then(res => res.json())
             .then((data) => {
                 // console.log(data);

@@ -29,7 +29,7 @@ const AddTouristsSpot = () => {
         const name = user?.displayName;
         const newInfo = { spotName, location, seasonality, visitor, country, cost, travelTime, imageUrl, description, email, name };
 
-        fetch("http://localhost:5000/addInfo", {
+        fetch("https://paradise-of-earth.vercel.app/addInfo", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(newInfo)

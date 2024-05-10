@@ -17,7 +17,7 @@ const UpdateSpot = () => {
     // console.log(userData);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleInfo/${id}`)
+        fetch(`https://paradise-of-earth.vercel.app/singleInfo/${id}`)
             .then(res => res.json())
             .then(data => {
                 setUserData(data);
@@ -37,7 +37,7 @@ const UpdateSpot = () => {
         const imageUrl = form.get('image-url');
         const description = form.get('description');
         const newInfo = { spotName, location, seasonality, visitor, country, cost, travelTime, imageUrl, description };
-        fetch(`http://localhost:5000/updateInfo/${id}`, {
+        fetch(`https://paradise-of-earth.vercel.app/updateInfo/${id}`, {
             method: "PUT",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(newInfo)

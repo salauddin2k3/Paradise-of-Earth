@@ -16,7 +16,7 @@ const CountryDetails = () => {
     // console.log(userData);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/anotherSingleInfo/${id}`)
+        fetch(`https://paradise-of-earth.vercel.app/anotherSingleInfo/${id}`)
             .then(res => res.json())
             .then(data => {
                 setUserData(data);

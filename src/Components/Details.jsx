@@ -14,7 +14,7 @@ const Details = () => {
     // console.log(userData);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleInfo/${id}`)
+        fetch(`https://paradise-of-earth.vercel.app/singleInfo/${id}`)
             .then(res => res.json())
             .then(data => {
                 setUserData(data);
